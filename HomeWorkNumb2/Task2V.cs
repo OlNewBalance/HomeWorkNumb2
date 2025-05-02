@@ -1,20 +1,18 @@
-﻿namespace HomeWorkNumb2;
+namespace HomeWorkNumb2;
 
-internal class Task2X // НЕДОДЕЛАННО ДОДЕЛАТЬ
+internal class Task2V
 {
     public void Execute()
     {
         int count = 0;
-        while (true)
+        string userInput = "";
+        
+        while (userInput?.ToLower() != "exit")
         {
-            
-            Console.WriteLine($"Счетчик:{count}, чтобы окончить отсчёт, введите \"Exit\".");
+            Console.WriteLine($"Счетчик:{count}, чтобы окончить отсчёт, введите \"exit\".");
             count++;
-            String Exit = Console.ReadLine();
-            if (Exit == "Exit" || Exit == "exit")
-            {
-                break;
-            }
+            
+            userInput = Console.ReadLine();
         }
     }
 }
