@@ -1,5 +1,5 @@
 namespace HomeWorkNumb2;
-internal class Task5X
+internal class Task5V
 {
     public void Execute()
     {
