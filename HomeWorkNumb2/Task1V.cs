@@ -1,4 +1,4 @@
-﻿namespace HomeWorkNumb2;
+namespace HomeWorkNumb2;
 
 internal class Task1
 {
@@ -8,7 +8,13 @@ internal class Task1
         Console.WriteLine("Введите текст для повтора:");
         string text = Console.ReadLine();
         Console.WriteLine("Введите количество повторов:");
-        int reps = Convert.ToInt32(Console.ReadLine());
+        string repsInput = Console.ReadLine();
+        int reps;
+        while (!int.TryParse(repsInput, out reps))
+        {
+            Console.WriteLine("Некорректный ввод, введите целое число:");
+            repsInput = Console.ReadLine();
+        }
         while (count < reps)
         {
             Console.WriteLine($"{text}");
